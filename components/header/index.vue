@@ -1,7 +1,7 @@
 <script setup>
     const header = "flex flex-row justify-between items-center fixed h-[50px] w-full px-16"
     const div = 'flex gap-14'
-    const links = 'text-red-800 font-bold transition-colors hover:text-red-600 text-sm font-pp'
+    const links = 'text-red-800 font-bold transition-colors hover:text-red-600 text-md font-pp'
 </script>
 
 <template>

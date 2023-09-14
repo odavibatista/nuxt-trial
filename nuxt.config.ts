@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   ],
   app:  {
     head: {
-      title: 'Nuxt Testings',
+      title: "Daniels' Steaks",
       meta: [
         { name: 'informations', content: 'Testing Nuxt 3'}
       ],
