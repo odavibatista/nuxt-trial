@@ -15,8 +15,10 @@
 
 <template>
     <div>
-        <h1>
-            Hello, World! We're on the {{ $route.name }} section!
-        </h1>
+        <Header/>
+        <Container>
+            <route_tester />
+        </Container>
+        <Footer/>
     </div>
 </template>

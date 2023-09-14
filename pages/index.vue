@@ -1,10 +1,10 @@
 <script setup>
     definePageMeta({
-        title: 'Featured'
+        title: 'Home'
     })
 
     useHead({
-        title: 'Featured',
+        title: 'Home',
         meta:   [
             { name: 'Featured', content: 'Featured stuff'}
         ]
@@ -12,7 +12,30 @@
 
 </script>
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+    <div>
+        <Header/>
+        <Container>
+            <route_tester />
+        </Container>
+        <Footer/>
+    </div>
 </template>
+
+<style>
+    * {
+        scroll-behavior: smooth;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #020617;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #7c7c7e;
+        transition: 0.3s;
+    }
+</style>
