@@ -1,6 +1,6 @@
 <script setup>
     definePageMeta({
-        title: 'About'
+        title: 'Daniels | About'
     })
 
     useHead({

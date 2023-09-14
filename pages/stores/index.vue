@@ -1,12 +1,12 @@
 <script setup>
     definePageMeta({
-        title: 'Daniels | Featured'
+        title: "Daniels' | Our Stores"
     })
 
     useHead({
-        title: 'Daniels | Featured',
+        title: "Daniels' | Our Stores",
         meta:   [
-            { name: 'Featured', content: 'Featured stuff'}
+            { name: ' | Our Stores', content: "Our company's steak stores, addresses and contacts!"}
         ]
     })
 
