@@ -17,7 +17,7 @@
     <div>
         <Header/>
         <Container>
-            <route_tester />
+            <stores_list />
         </Container>
         <Footer/>
     </div>
