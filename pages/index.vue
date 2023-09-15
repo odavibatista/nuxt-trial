@@ -11,7 +11,7 @@
     })
 
     const h1 = "text-4xl text-red-900 font-bold font-ms"
-    const sub = "text-md text-gray-900 font-pp"
+    const sub = "text-lg text-gray-900 font-pp leading-3 pt-4"
 
 </script>
 <template>
@@ -35,15 +35,15 @@
     }
     
     ::-webkit-scrollbar {
-        width: 6px;
+        width: 4px;
     }
     
     ::-webkit-scrollbar-track {
-        background: #020617;
+        background: #fbfbfb;
     }
     
     ::-webkit-scrollbar-thumb {
-        background: #7c7c7e;
+        background: #a70000;
         transition: 0.3s;
     }
 </style>

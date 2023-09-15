@@ -1,5 +1,5 @@
 <script setup>
-    const header = "flex flex-row justify-between items-center fixed h-[50px] w-full px-16"
+    const header = "flex flex-row justify-between items-center fixed h-[50px] w-full px-16 bg-zinc-100"
     const div = 'flex gap-14'
     const links = 'text-red-800 font-bold transition-colors hover:text-red-600 text-md font-ms'
 </script>
