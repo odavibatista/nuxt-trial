@@ -68,11 +68,18 @@
         },
     ]
 
-    const cards_section = "flex flex-row gap-14 flex-wrap justify-around"
+    
+    const styles = {
+        h1: "text-red-800 text-4xl font-ms font-bold",
+        p: "text-xl font-pp pt-4",
+        cards_section : "flex flex-row gap-14 flex-wrap justify-around py-12"
+    }
 </script>
 
 <template>
-    <div :class="cards_section">
+    <h1 :class="styles.h1">Our Stores</h1>
+    <p :class="styles.p">See our store locations and find the one closest to you!</p>
+    <div :class="styles.cards_section">
         <store_card v-for="store of stores" v-bind="store" />
     </div>
 </template>

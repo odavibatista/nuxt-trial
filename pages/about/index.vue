@@ -1,19 +1,19 @@
 <script setup>
     definePageMeta({
-        title: 'Daniels | About'
+        title: "Daniels' - About"
     })
 
     useHead({
-        title: 'About',
+        title: "Daniels' - About",
         meta:   [
-            { name: 'About', content: 'About us'}
+            { name: "Daniels' - About", content: "Know more about Daniels' butchery shop!"}
         ]
     })
 
     const styles = {
         section: "flex flex-row gap-14",
         div: "flex flex-col gap-5",
-        h1: "text-5xl font-ms text-red-800 font-bold",
+        h1: "text-4xl font-ms text-red-800 font-bold",
         p: "text-xl font-pp",
         img: "w-[530px] "
     }

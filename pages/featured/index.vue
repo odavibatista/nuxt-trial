@@ -6,7 +6,7 @@
     useHead({
         title: "Daniels' - Featured",
         meta:   [
-            { name: "Daniels' - Featured", content: 'Featured stuff'}
+            { name: "Daniels' - Featured", content: "See Daniels' featured topics!"}
         ]
     })
 
