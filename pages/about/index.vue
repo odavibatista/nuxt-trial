@@ -17,7 +17,6 @@
     <div>
         <Header/>
         <Container>
-            <route_tester />
         </Container>
         <Footer/>
     </div>

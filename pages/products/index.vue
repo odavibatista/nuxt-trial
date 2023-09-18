@@ -17,7 +17,6 @@
     <div>
         <Header/>
         <Container>
-            <stores_list />
         </Container>
         <Footer/>
     </div>
