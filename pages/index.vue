@@ -10,8 +10,10 @@
         ]
     })
 
-    const h1 = "text-4xl text-red-900 font-bold font-ms"
-    const sub = "text-lg text-gray-900 font-pp leading-3 pt-4"
+    const styles = {
+        h1: "text-4xl text-red-900 font-bold font-ms",
+        sub: "text-lg text-gray-900 font-pp leading-3 pt-4"
+    }
 
 </script>
 <template>
@@ -19,8 +21,8 @@
         <Header/>
         <Container>
             <div>
-                <h1 :class="h1">The best steaks, for the best prices.</h1>
-                <article :class="sub">Daniels' comes handy on barbecue supplies and quality grade meat.</article>
+                <h1 :class="styles.h1">The best steaks, for the best prices.</h1>
+                <article :class="styles.sub">Daniels' comes handy on barbecue supplies and quality grade meat.</article>
             </div>
         </Container>
         <Footer/>
