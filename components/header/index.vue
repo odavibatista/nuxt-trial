@@ -14,7 +14,7 @@
                 <img src="/header/brand.png" alt="brand" :class="styles.brand">
             </RouterLink>
         </div>
-        <div :class="div">
+        <div :class="styles.div">
             <RouterLink :class="styles.links" to="/about"> About </RouterLink>
             <RouterLink :class="styles.links" to="/products"> Products </RouterLink>
             <RouterLink :class="styles.links" to="/featured"> Featured </RouterLink>
