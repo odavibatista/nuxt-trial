@@ -11,7 +11,8 @@ export default defineNuxtConfig({
         { name: 'informations', content: 'Testing Nuxt 3'}
       ],
       link: [
-        { rel: 'stylesheet', href: ''}
+        { rel: 'stylesheet', href: ''},
+        { rel: 'icon', type: 'image/x-icon', href: '/icon.png'}
       ]
     }
   }

@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-zinc-50 flex flex-col px-16 pt-16">
+    <section class="bg-zinc-50 flex flex-col px-16 py-24">
         <slot />
     </section>
 </template>
