@@ -70,7 +70,7 @@
 
     
     const styles = {
-        h1: "text-red-800 text-4xl font-ms font-bold",
+        h1: "text-red-600 text-4xl font-ms font-bold",
         p: "text-xl font-pp pt-4",
         cards_section : "flex flex-row gap-14 flex-wrap justify-around py-12"
     }

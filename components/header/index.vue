@@ -1,9 +1,9 @@
 <script setup>
     const styles = {
-        header: "flex flex-row justify-between items-center fixed h-[65px] w-full px-16 bg-zinc-100",
+        header: "flex flex-row justify-between items-center fixed h-[55px] w-full px-16 bg-amber-200",
         div: 'flex gap-14',
-        links: 'text-red-800 font-bold transition-colors hover:text-red-600 text-md font-ms',
-        brand: 'w-[140px] :hover'
+        links: 'text-red-600 font-bold transition-colors hover:text-red-800 text-md font-ms',
+        brand: 'w-[140px] hover:brightness-50 transition-all duration-300 ease-in-out cursor-pointer hover:scale-[1.01]'
     }
 </script>
 
