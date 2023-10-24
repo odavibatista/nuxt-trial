@@ -11,8 +11,11 @@ export default defineNuxtConfig({
         { name: 'informations', content: 'Testing Nuxt 3'}
       ],
       link: [
-        { rel: 'stylesheet', href: ''},
-        { rel: 'icon', type: 'image/x-icon', href: '/icon.png'}
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' },
+        { rel: 'icon', type: 'image/x-icon', href: '/icon.png'},
+      ],
+      script: [
+        { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'}
       ]
     }
   }

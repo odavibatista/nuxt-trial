@@ -1,24 +1,20 @@
 <script setup>
-    definePageMeta({
-        title: "Daniels' - Featured"
-    })
+definePageMeta({
+    title: "Daniels' - Featured"
+})
 
-    useHead({
-        title: "Daniels' - Featured",
-        meta:   [
-            { name: "Daniels' - Featured", content: "See Daniels' featured topics!"}
-        ]
-    })
-
+useHead({
+    title: "Daniels' - Featured",
+    meta: [{ name: "Daniels' - Featured", content: "See Daniels' featured topics!" }]
+})
 </script>
-
 
 <template>
     <div>
-        <Header/>
+        <Header />
         <Container>
             <route_tester />
         </Container>
-        <Footer/>
+        <Footer />
     </div>
 </template>
