@@ -27,11 +27,12 @@ const carousel = [
         alt: 'Daniels Brand'
     }
 ]
+
 </script>
 <template>
     <div>
         <Header />
-        <Container v-bind="carousel">
+        <Container>
             <div>
                 <h1 :class="styles.h1">The best steaks, with the best prices.</h1>
                 <article :class="styles.sub">
@@ -39,38 +40,7 @@ const carousel = [
                 </article>
             </div>
             <div>
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img
-                                :src="carousel[0].url"
-                                class="d-block w-100"
-                                :alt="carousel[0].alt"
-                            />
-                        </div>
-                        <div class="carousel-item" v-for="(link, index) in carousel.slice(1)">
-                            <img :src="link.url" class="d-block w-100" :alt="link.alt" />
-                        </div>
-                    </div>
-                    <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExample"
-                        data-bs-slide="prev"
-                    >
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExample"
-                        data-bs-slide="next"
-                    >
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+                <Carousel :links="carousel" />
             </div>
         </Container>
         <Footer />
