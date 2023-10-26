@@ -1,23 +1,23 @@
 <script setup>
 const styles = {
-    footer: ' flex flex-col font-ms text-zinc-200 text-sm md:text-start text-center ',
-    p: 'pt-4 pb-2 font-bold',
+    footer: 'flex flex-col font-ms text-zinc-200 text-sm md:text-start text-center ',
+    p: 'pt-4 pb-2 font-small text-xs md:text-sm lg:text-base md:font-normal lg:font-bold',
     brand: 'w-32',
     top: {
-        div: 'flex flex-row justify-between items-center px-8 lg:px-16 py-16 bg-zinc-900',
-        left: 'flex flex-col gap-4  text-left lg:text-center',
-        right: 'flex flex-col gap-14',
-        linksDiv: 'flex flex-row gap-8 lg:gap-14',
+        div: 'flex flex-col md:flex-row justify-between items-center gap-8 px-8 lg:px-16 py-16 bg-zinc-900',
+        left: 'flex flex-col gap-4  md:text-left text-center',
+        right: 'flex flex-col gap-8 md:gap-14',
+        linksDiv: 'flex flex-row gap-8 lg:gap-14 flex-wrap justify-center md:justify-between',
         socialLinks: 'flex flex-row gap-14 justify-center',
-        span: 'flex flex-row gap-0',
-        input: 'bg-zinc-200 h-9 w-48 xl:w-72 p-2 xl:px-4  xl:h-12 text-zinc-600 border-none',
+        span: 'flex flex-row gap-0 self-center md:self-start',
+        input: 'bg-zinc-200 h-9 w-56 xl:w-72 p-2 xl:px-4 xl:h-12 text-zinc-600 border-none',
         button: 'w-9 h-9 xl:h-12 xl:w-12 bg-red-600 grid place-content-center',
         buttonIcon: 'h-5 w-5 xl:w-8 xl:h-8',
-        h5: 'font-bold xl:text-3xl text-xl font-ms'
+        h5: 'font-bold xl:text-3xl text-xl font-ms md:text-left'
     },
     bottom: 'border-t-2 border-zinc-200 bg-zinc-900 flex flex-col px-8 lg:px-16 py-4 items-center',
-    links: 'font-medium transition-colors hover:text-red-600 lg:text-sm xl:text-base font-ms',
-    icons: 'hover:text-red-600 transition-colors duration-300 ease-in-out w-6 h-6 lg:w-8 lg:h-8'
+    links: 'font-medium transition-colors hover:text-red-600 text-xs lg:text-sm xl:text-base font-ms',
+    icons: 'hover:text-red-600 transition-colors duration-300 ease-in-out h-5 w-5 md:w-6 md:h-6 lg:w-8 lg:h-8'
 }
 </script>
 
