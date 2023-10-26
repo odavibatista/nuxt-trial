@@ -7,7 +7,7 @@ const styles = {
         div: 'flex flex-row justify-between items-center px-8 lg:px-16 py-16 bg-zinc-900',
         left: 'flex flex-col gap-4  text-left lg:text-center',
         right: 'flex flex-col gap-14',
-        linksDiv: 'flex flex-row gap-10 lg:gap-14',
+        linksDiv: 'flex flex-row gap-8 lg:gap-14',
         socialLinks: 'flex flex-row gap-14 justify-center',
         span: 'flex flex-row gap-0',
         input: 'bg-zinc-200 h-9 w-48 xl:w-72 p-2 xl:px-4  xl:h-12 text-zinc-600 border-none',
@@ -16,7 +16,7 @@ const styles = {
         h5: 'font-bold xl:text-3xl text-xl font-ms'
     },
     bottom: 'border-t-2 border-zinc-200 bg-zinc-900 flex flex-col px-8 lg:px-16 py-4 items-center',
-    links: 'font-md transition-colors hover:text-red-600 lg:text-sm xl:text-base font-ms',
+    links: 'font-medium transition-colors hover:text-red-600 lg:text-sm xl:text-base font-ms',
     icons: 'hover:text-red-600 transition-colors duration-300 ease-in-out w-6 h-6 lg:w-8 lg:h-8'
 }
 </script>
