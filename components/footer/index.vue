@@ -4,19 +4,20 @@ const styles = {
     p: 'pt-4 pb-2 font-bold',
     brand: 'w-32',
     top: {
-        div: 'flex flex-row justify-between items-center px-16 py-16 bg-zinc-900',
-        left: 'flex flex-col gap-4',
+        div: 'flex flex-row justify-between items-center px-8 lg:px-16 py-16 bg-zinc-900',
+        left: 'flex flex-col gap-4  text-left lg:text-center',
         right: 'flex flex-col gap-14',
-        linksDiv: 'flex flex-row gap-14',
+        linksDiv: 'flex flex-row gap-10 lg:gap-14',
         socialLinks: 'flex flex-row gap-14 justify-center',
         span: 'flex flex-row gap-0',
-        input: 'bg-zinc-200 w-72 p-2 px-4 text-zinc-600 border-none',
-        button: 'h-12 w-12 bg-red-600 grid place-content-center',
-        h5: 'font-bold text-3xl font-ms'
+        input: 'bg-zinc-200 h-9 w-48 xl:w-72 p-2 xl:px-4  xl:h-12 text-zinc-600 border-none',
+        button: 'w-9 h-9 xl:h-12 xl:w-12 bg-red-600 grid place-content-center',
+        buttonIcon: 'h-5 w-5 xl:w-8 xl:h-8',
+        h5: 'font-bold xl:text-3xl text-xl font-ms'
     },
-    bottom: 'border-t-2 border-zinc-200 bg-zinc-900 flex flex-col px-16 py-4 items-center',
-    links: 'font-bold transition-colors hover:text-red-600 text-base font-ms',
-    icons: 'hover:text-red-600 transition-colors duration-300 ease-in-out w-8 h-8'
+    bottom: 'border-t-2 border-zinc-200 bg-zinc-900 flex flex-col px-8 lg:px-16 py-4 items-center',
+    links: 'font-md transition-colors hover:text-red-600 lg:text-sm xl:text-base font-ms',
+    icons: 'hover:text-red-600 transition-colors duration-300 ease-in-out w-6 h-6 lg:w-8 lg:h-8'
 }
 </script>
 
@@ -38,7 +39,7 @@ const styles = {
                             width="16"
                             height="16"
                             fill="currentColor"
-                            class="w-8 h-8"
+                            :class="styles.top.buttonIcon"
                             viewBox="0 0 16 16"
                         >
                             <path

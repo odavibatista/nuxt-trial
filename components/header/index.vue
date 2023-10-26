@@ -1,6 +1,6 @@
 <script setup>
 const styles = {
-    header: 'flex flex-row justify-between items-center fixed h-[55px] w-full px-16 bg-amber-200 z-1',
+    header: 'flex flex-row justify-between items-center fixed h-[55px] w-full px-8 lg:px-16 bg-amber-200 z-1',
     div: 'flex gap-14',
     links: 'text-red-600 font-bold transition-colors hover:text-red-800 text-base font-ms',
     brand: 'w-[140px] hover:brightness-50 transition-all duration-300 ease-in-out cursor-pointer hover:scale-[1.01]'

@@ -9,16 +9,20 @@ useHead({
 })
 
 const styles = {
+    container: "",
     h1: 'text-4xl text-red-900 font-bold font-ms',
     sub: 'text-lg text-gray-900 font-pp leading-3 pt-4',
     divs:   {
-        carousel: 'flex flex-row align-center justify-between pt-8',
+        carousel: 'flex flex-col lg:flex-row align-center justify-between pt-8 w-full gap-4',
         deal_title: "font-ms uppercase text-2xl text-zinc-100 font-bold bg-zinc-900 w-96 text-center py-2",
-        deal_img: "w-96",
+        deal_img: "w-full",
         deal_div: "flex flex-col justify-center items-center text-center gap-2 font-ms",
         h6: "text-2xl text-zinc-900 font-medium uppercase font-medium",
         button: "bg-red-600 py-2 px-4 text-white font-pp font-medium uppercase text-lg hover:bg-red-800 transition duration-300 ease-in-out",
-    }
+        offer: "flex flex-col w-96",
+    },
+    carousel: "lg:w-[55%] w-full"
+    
 }
 
 const carousel = [
@@ -44,26 +48,26 @@ const carousel = [
 <template>
     <div>
         <Header />
-        <Container>
-            <div>
-                <h1 :class="styles.h1">The best steaks, with the best prices.</h1>
-                <article :class="styles.sub">
-                    Daniels' comes handy on barbecue supplies and quality grade meat.
-                </article>
-            </div>
+        <Container :class="styles.container">
+                <div class="flex flex-col">
+                    <h1 :class="styles.h1">The best steaks, with the best prices.</h1>
+                    <article :class="styles.sub">
+                        Daniels' comes handy on barbecue supplies and quality grade meat.
+                    </article>
+                </div>
 
-            <div :class="styles.divs.carousel">
-                <Carousel :links="carousel" class="w-[60%]" />
-                <div>
-                    <h3 :class="styles.divs.deal_title">Deal of the week</h3>
-                    <div :class="styles.divs.deal_div">
-                        <img src="/home/deal.jpg" alt="deal of the week" :class="styles.divs.deal_img" />
-                        <h6 :class="styles.divs.h6" >Veal Rack</h6>
-                        <p :class="styles.divs.p">$ 9.49</p>
-                        <button :class="styles.divs.button">Shop it</button>
+                <div :class="styles.divs.carousel">
+                    <Carousel :links="carousel" :class="styles.carousel" />
+                    <div :class="styles.divs.offer">
+                        <h3 :class="styles.divs.deal_title">Deal of the week</h3>
+                        <div :class="styles.divs.deal_div">
+                            <img src="/home/deal.jpg" alt="deal of the week" :class="styles.divs.deal_img" />
+                            <h6 :class="styles.divs.h6" >Veal Rack</h6>
+                            <p :class="styles.divs.p">$ 9.49</p>
+                            <button :class="styles.divs.button">Shop it</button>
+                        </div>
                     </div>
                 </div>
-            </div>
         </Container>
         <Footer />
     </div>
