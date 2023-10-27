@@ -69,9 +69,9 @@ const stores = [
 ]
 
 const styles = {
-    h1: 'text-red-600 text-4xl font-ms font-bold',
-    p: 'text-xl font-pp pt-4',
-    cards_section: 'flex flex-row gap-14 flex-wrap justify-around py-12'
+    h1: 'text-red-600 text-2xl md:text-4xl font-ms font-bold',
+    p: 'text-md md:text-xl font-pp pt-4',
+    cards_section: 'flex flex-row gap-14 flex-wrap justify-center md:justify-around py-12'
 }
 </script>
 

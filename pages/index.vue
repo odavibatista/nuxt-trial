@@ -10,8 +10,8 @@ useHead({
 
 const styles = {
     container: "",
-    h1: 'text-4xl text-red-900 font-bold font-ms',
-    sub: 'text-lg text-gray-900 font-pp leading-3 pt-4',
+    h1: 'text-2xl lg:text-4xl text-red-900 font-bold font-ms',
+    sub: 'text-md lg:text-lg text-gray-900 font-pp leading-5 pt-4',
     divs:   {
         carousel: 'flex flex-col lg:flex-row align-center justify-between pt-8 w-full gap-4',
         deal_title: "font-ms uppercase text-2xl text-zinc-100 font-bold bg-zinc-900 text-center py-2",
