@@ -1,11 +1,11 @@
 <script setup>
 const styles = {
-    footer: 'flex flex-col font-ms text-zinc-200 text-sm md:text-start text-center ',
+    footer: 'flex flex-col font-ms text-zinc-200 text-sm md:text-start text-center w-full',
     p: 'pt-4 pb-2 font-small text-xs md:text-sm lg:text-base md:font-normal lg:font-bold',
     brand: 'w-32',
     top: {
         div: 'flex flex-col md:flex-row justify-between items-center gap-8 px-8 lg:px-16 py-16 bg-zinc-900',
-        left: 'flex flex-col gap-4  md:text-left text-center',
+        left: 'flex flex-col gap-4  lg:text-left',
         right: 'flex flex-col gap-8 md:gap-14',
         linksDiv: 'flex flex-row gap-8 lg:gap-14 flex-wrap justify-center md:justify-between',
         socialLinks: 'flex flex-row gap-14 justify-center',
