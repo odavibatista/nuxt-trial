@@ -14,12 +14,12 @@ const styles = {
     sub: 'text-lg text-gray-900 font-pp leading-3 pt-4',
     divs:   {
         carousel: 'flex flex-col lg:flex-row align-center justify-between pt-8 w-full gap-4',
-        deal_title: "font-ms uppercase text-2xl text-zinc-100 font-bold bg-zinc-900 w-96 text-center py-2",
+        deal_title: "font-ms uppercase text-2xl text-zinc-100 font-bold bg-zinc-900 text-center py-2",
         deal_img: "w-full",
         deal_div: "flex flex-col justify-center items-center text-center gap-2 font-ms",
         h6: "text-2xl text-zinc-900 font-medium uppercase font-medium",
         button: "bg-red-600 py-2 px-4 text-white font-pp font-medium uppercase text-lg hover:bg-red-800 transition duration-300 ease-in-out",
-        offer: "flex flex-col w-96",
+        offer: "flex flex-col w-full md:w-96",
     },
     carousel: "lg:w-[55%] w-full"
     
