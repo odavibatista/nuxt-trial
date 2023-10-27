@@ -11,7 +11,7 @@ useHead({
 const styles = {
     section: 'flex flex-col md:flex-row justify-between items-center gap-5',
     div: 'flex flex-col gap-3 lg:gap-5',
-    h1: 'text-3xl md:text-2xl lg:text-4xl font-ms text-red-800 font-bold',
+    h1: 'text-3xl md:text-2xl lg:text-4xl font-ms text-red-600 font-bold',
     p: 'text-sm md:text-sm lg:text-xl font-pp',
     img: 'md:w-[45%] w-[100%]'
 }

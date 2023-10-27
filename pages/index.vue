@@ -9,8 +9,7 @@ useHead({
 })
 
 const styles = {
-    container: "",
-    h1: 'text-2xl lg:text-4xl text-red-900 font-bold font-ms',
+    h1: 'text-2xl lg:text-4xl text-red-600 font-bold font-ms',
     sub: 'text-md lg:text-lg text-gray-900 font-pp leading-5 pt-4',
     divs:   {
         carousel: 'flex flex-col lg:flex-row align-center justify-between pt-8 w-full gap-4',
@@ -48,7 +47,7 @@ const carousel = [
 <template>
     <div>
         <Header />
-        <Container :class="styles.container">
+        <Container>
                 <div class="flex flex-col">
                     <h1 :class="styles.h1">The best steaks, with the best prices.</h1>
                     <article :class="styles.sub">
