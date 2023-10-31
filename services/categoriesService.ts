@@ -9,3 +9,5 @@ const categoriesService = {
         headers: { 'token': sessionStorage.getItem("token")}
     })
 }
+
+export default categoriesService
