@@ -1,13 +1,11 @@
 import api from "./api"
 
 const categoriesService = {
-    findAll: () => api.get("/categories", {
-        headers: { 'token': sessionStorage.getItem("token")}
-    }),
+    /* Get all categories */
+    findAll: () => api.get("/categories"),
 
-    findOne: (id: string) => api.get(`/categories/${id}`, {
-        headers: { 'token': sessionStorage.getItem("token")}
-    })
+    /* Get one category by its id */
+    findOne: (id: string) => api.get(`/categories/${id}`)
 }
 
 export default categoriesService
