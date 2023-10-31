@@ -1,19 +1,15 @@
 <script setup>
-    defineProps(['links'])
+defineProps(['links'])
 </script>
 
 <template>
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img
-                    :src="links[0].url"
-                    class="d-block w-[100%]"
-                    :alt="links[0].alt"
-                />
+                <img :src="links[0].url" class="d-block w-[100%]" :alt="links[0].alt" />
             </div>
             <div class="carousel-item" v-for="(link, index) in links.slice(1)">
-                <img :src="link.url" class="d-block  w-[100%]" :alt="link.alt" />
+                <img :src="link.url" class="d-block w-[100%]" :alt="link.alt" />
             </div>
         </div>
         <button
