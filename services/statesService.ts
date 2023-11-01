@@ -7,3 +7,5 @@ const statesService = {
     /* Get one state by its id */
     findOne: (id: string) => api.get(`/states/${id}`)
 }
+
+export default statesService
