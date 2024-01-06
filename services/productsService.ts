@@ -10,6 +10,16 @@ export type ProductType = {
     featured: boolean
 }
 
+interface CreateProductParams {
+    title: string,
+    price: number,
+    imgUrl: string,
+    description: string,
+    category: string,
+    featured: boolean
+
+}
+
 const productsService = {
     /* Get all products */
     findAll: async () => {
@@ -48,7 +58,52 @@ const productsService = {
     },
 
     /* Create a new product */
-    create: (data: any) => api.post("/products/create", data),
+    create: async (data: CreateProductParams) => {
+        // Dummy token, still to be added
+        const token = localStorage.getItem("user-token")
+
+        const response = api.post("/products/create", data, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).catch((err) => {
+            return err.response
+        })
+
+        return response
+    },
+
+    /* Update a product */
+    update: async (productId: string, data: CreateProductParams) => {
+        // Dummy token, still to be added
+        const token = localStorage.getItem("user-token")
+
+        const response = api.put(`/products/update/${productId}`, data, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).catch((err) => {
+            return err.response
+        })
+
+        return response
+    },
+
+    /* Delete a product */
+    delete: async (productId: string) => {
+        // Dummy token, still to be added
+        const token = localStorage.getItem("user-token")
+
+        const response = api.delete(`/products/delete/${productId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).catch((err) => {
+            return err.response
+        })
+
+        return response
+    }
 }
 
 export default productsService
