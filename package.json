@@ -1,5 +1,5 @@
 {
-  "name": "vue-trial",
+  "name": "daniels-steaks-front-end",
   "private": true,
   "scripts": {
     "build": "nuxt build",

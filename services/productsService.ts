@@ -48,6 +48,14 @@ const productsService = {
         return response
     },
 
+    findFeatured: async () => {
+        const response = api.get("/products/getFeatured").catch((err) => {
+            return err.response
+        })
+
+        return response
+    },
+
     /* Search a product by its name */
     search: async (name: string) => {
         const response = api.get(`/products/search?title=${name}`).catch((err) => {
