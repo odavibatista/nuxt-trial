@@ -31,7 +31,7 @@ const productsService = {
     },
 
     /* Get one product by its id */
-    findOne: async (productId: string) => {
+    findById: async (productId: string) => {
         const response = api.get(`/products/get/${productId}`).catch((err) => {
             return err.response
         })
