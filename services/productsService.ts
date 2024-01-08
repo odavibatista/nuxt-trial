@@ -86,7 +86,7 @@ const productsService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.put(`/products/update/${productId}`, data, {
+        const response = api.patch(`/products/update/${productId}`, data, {
             headers: {
                 Authorization: `Bearer ${token}`
             }

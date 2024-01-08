@@ -45,7 +45,7 @@ const categoriesService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.put(`/categories/update/${id}`, data, {
+        const response = api.patch(`/categories/update/${id}`, data, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
