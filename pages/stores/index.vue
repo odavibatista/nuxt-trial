@@ -18,7 +18,7 @@ useHead({
     <div>
         <Header />
         <Container>
-            <stores_list />
+            <StoresList />
         </Container>
         <Footer />
     </div>

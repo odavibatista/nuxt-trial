@@ -1,4 +1,5 @@
 <script setup>
+import pingService from '@/services/pingService'
 definePageMeta({
     title: "Daniels' - Home"
 })
@@ -42,6 +43,11 @@ const carousel = [
         alt: 'slide 4'
     }
 ]
+const response = await pingService()
+
+
+const hello = response.data.hello
+
 </script>
 <template>
     <div>
@@ -70,6 +76,7 @@ const carousel = [
                     </div>
                 </div>
             </div>
+        <p>{{ hello }}</p>
         </Container>
         <Footer />
     </div>
