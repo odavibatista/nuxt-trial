@@ -3,7 +3,7 @@ import storesService from '@/services/storesService'
 
 const stores = await storesService.findAll()
 
-const allStores = await stores._rawValue.stores
+const allStores = await stores.stores
 
 const cards_section = 'flex flex-row gap-14 flex-wrap justify-center md:justify-around py-12'
 </script>   

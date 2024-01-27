@@ -1,5 +1,3 @@
-import baseURL from "./api"
-
 export type StoreType = {
     id: string,
     name: string,
@@ -22,12 +20,11 @@ interface CreateStoreParams {
 const storesService = {
     /* Get all stores */
     findAll: async () => {
-        const { data: response } = await useLazyFetch(`/stores/get`, {
-            method: 'GET',
-            baseURL: baseURL
+        const { data: response } = await apiRequest(`/stores/get`, {
+            method: 'GET'
         })
 
-        return response
+        return toRaw(response.value)
     },
 }
 
