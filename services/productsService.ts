@@ -1,5 +1,3 @@
-import baseURL from "./api"
-
 export type ProductType = {
     id: string,
     title: string,
@@ -23,9 +21,8 @@ interface CreateProductParams {
 const productsService = {
     /* Get all products */
     findAll: async () => {
-        const response = await $fetch("/products/get", {
+        const { data: response} = await apiRequest("/products/get", {
             method: "GET",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
             }
@@ -33,14 +30,13 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Get one product by its id */
     findById: async (productId: string) => {
-        const response = await $fetch(`/products/get/${productId}`, {
+        const { data: response} = await apiRequest(`/products/get/${productId}`, {
             method: "GET",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
             }
@@ -48,14 +44,13 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Get all the products of a specific category by its id */
     findByCategory: async (categoryId: string) => {
-        const response = await $fetch(`/products/getByCategory/${categoryId}`, {
+        const { data: response} = await apiRequest(`/products/getByCategory/${categoryId}`, {
             method: "GET",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
             }
@@ -63,14 +58,13 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Find featured products */
     findFeatured: async () => {
-        const response = await $fetch("/products/getFeatured", {
+        const { data: response} = await apiRequest("/products/getFeatured", {
             method: "GET",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
             }
@@ -78,14 +72,13 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Search a product by its name */
     search: async (name: string) => {
-        const response = await $fetch(`/products/search/${name}`, {
+        const { data: response} = await apiRequest(`/products/search/${name}`, {
             method: "GET",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
             }
@@ -93,7 +86,7 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Create a new product */
@@ -101,9 +94,8 @@ const productsService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = await $fetch("/products/create", {
+        const { data: response} = await apiRequest("/products/create", {
             method: "POST",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
                 Authorization: `Bearer ${token}`
@@ -113,7 +105,7 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Update a product */
@@ -121,9 +113,8 @@ const productsService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = await $fetch(`/products/update/${productId}`, {
+        const { data: response} = await apiRequest(`/products/update/${productId}`, {
             method: "PATCH",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
                 Authorization: `Bearer ${token}`
@@ -133,7 +124,7 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Delete a product */
@@ -141,9 +132,8 @@ const productsService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = await $fetch(`/products/delete/${productId}`, {
+        const { data: response} = await apiRequest(`/products/delete/${productId}`, {
             method: "DELETE",
-            baseURL: baseURL,
             headers: {
                 "client-platform": "browser",
                 Authorization: `Bearer ${token}`
@@ -152,7 +142,7 @@ const productsService = {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     }
 }
 

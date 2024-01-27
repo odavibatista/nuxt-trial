@@ -22,6 +22,8 @@ const storesService = {
     findAll: async () => {
         const { data: response } = await apiRequest(`/stores/get`, {
             method: 'GET'
+        }).catch((err) => {
+            return err.response
         })
 
         return toRaw(response.value)

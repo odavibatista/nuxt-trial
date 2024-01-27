@@ -1,5 +1,3 @@
-import baseURL from "./api"
-
 interface CreateCategoryParams {
     name: string
     description: string
