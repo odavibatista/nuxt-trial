@@ -1,5 +1,5 @@
 <script setup>
-const store = defineProps(['_id', 'name', 'address', 'phone', 'city', 'state', 'imgUrl', '__v'])
+const store = defineProps(['_id', 'name', 'address', 'phone', 'city', 'state', 'imgUrl'])
 
 const styles = {
     card: 'flex flex-col bg-zinc-100 h-[270px] items-left w-[250px]',
@@ -13,7 +13,7 @@ const styles = {
 </script>
 
 <template>
-        <div :class="styles.card" :id="store._id + store.state + store.city + store.__v">
+        <div :class="styles.card">
         <img :src="store.imgUrl" />
         <div :class="styles.texts">
             <h6 :class="styles.name">{{ store.name }}</h6>

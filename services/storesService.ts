@@ -1,4 +1,4 @@
-import api from './api'
+import baseURL from "./api"
 
 export type StoreType = {
     id: string,
@@ -22,8 +22,12 @@ interface CreateStoreParams {
 const storesService = {
     /* Get all stores */
     findAll: async () => {
-        const response = api.get("/stores/get").catch((err) => {
-            return err.response
+        const response = await $fetch("/stores/get", {
+            method: "GET",
+            baseURL: baseURL,
+            headers: {
+                "client-platform": "browser",
+            }
         })
 
         return response

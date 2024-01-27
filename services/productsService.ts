@@ -1,4 +1,4 @@
-import api from "./api";
+import baseURL from "./api"
 
 export type ProductType = {
     id: string,
@@ -23,7 +23,13 @@ interface CreateProductParams {
 const productsService = {
     /* Get all products */
     findAll: async () => {
-        const response = api.get("/products/get").catch((err) => {
+        const response = await $fetch("/products/get", {
+            method: "GET",
+            baseURL: baseURL,
+            headers: {
+                "client-platform": "browser",
+            }
+        }).catch((err) => {
             return err.response
         })
 
@@ -32,7 +38,13 @@ const productsService = {
 
     /* Get one product by its id */
     findById: async (productId: string) => {
-        const response = api.get(`/products/get/${productId}`).catch((err) => {
+        const response = await $fetch(`/products/get/${productId}`, {
+            method: "GET",
+            baseURL: baseURL,
+            headers: {
+                "client-platform": "browser",
+            }
+        }).catch((err) => {
             return err.response
         })
 
@@ -41,15 +53,28 @@ const productsService = {
 
     /* Get all the products of a specific category by its id */
     findByCategory: async (categoryId: string) => {
-        const response = api.get(`/products/getByCategory/${categoryId}`).catch((err) => {
+        const response = await $fetch(`/products/getByCategory/${categoryId}`, {
+            method: "GET",
+            baseURL: baseURL,
+            headers: {
+                "client-platform": "browser",
+            }
+        }).catch((err) => {
             return err.response
         })
 
         return response
     },
 
+    /* Find featured products */
     findFeatured: async () => {
-        const response = api.get("/products/getFeatured").catch((err) => {
+        const response = await $fetch("/products/getFeatured", {
+            method: "GET",
+            baseURL: baseURL,
+            headers: {
+                "client-platform": "browser",
+            }
+        }).catch((err) => {
             return err.response
         })
 
@@ -58,7 +83,13 @@ const productsService = {
 
     /* Search a product by its name */
     search: async (name: string) => {
-        const response = api.get(`/products/search?title=${name}`).catch((err) => {
+        const response = await $fetch(`/products/search/${name}`, {
+            method: "GET",
+            baseURL: baseURL,
+            headers: {
+                "client-platform": "browser",
+            }
+        }).catch((err) => {
             return err.response
         })
 
@@ -70,10 +101,14 @@ const productsService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.post("/products/create", data, {
+        const response = await $fetch("/products/create", {
+            method: "POST",
+            baseURL: baseURL,
             headers: {
+                "client-platform": "browser",
                 Authorization: `Bearer ${token}`
-            }
+            },
+            body: data
         }).catch((err) => {
             return err.response
         })
@@ -86,10 +121,14 @@ const productsService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.patch(`/products/update/${productId}`, data, {
+        const response = await $fetch(`/products/update/${productId}`, {
+            method: "PATCH",
+            baseURL: baseURL,
             headers: {
+                "client-platform": "browser",
                 Authorization: `Bearer ${token}`
-            }
+            },
+            body: data
         }).catch((err) => {
             return err.response
         })
@@ -102,8 +141,11 @@ const productsService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.delete(`/products/delete/${productId}`, {
+        const response = await $fetch(`/products/delete/${productId}`, {
+            method: "DELETE",
+            baseURL: baseURL,
             headers: {
+                "client-platform": "browser",
                 Authorization: `Bearer ${token}`
             }
         }).catch((err) => {

@@ -15,11 +15,11 @@ const styles = {
             </RouterLink>
         </div>
         <div :class="styles.div">
-            <RouterLink :class="styles.links" to="/"> Home </RouterLink>
-            <RouterLink :class="styles.links" to="/about"> About </RouterLink>
-            <RouterLink :class="styles.links" to="/products"> Products </RouterLink>
-            <RouterLink :class="styles.links" to="/featured"> Featured </RouterLink>
-            <RouterLink :class="styles.links" to="/stores"> Our Stores </RouterLink>
+            <a :class="styles.links" href="/"> Home </a>
+            <a :class="styles.links" href="/about"> About </a>
+            <a :class="styles.links" href="/products">  Products </a>
+            <a :class="styles.links" href="/featured"> Featured </a>
+            <a :class="styles.links" href="/stores"> Our Stores </a>
         </div>
     </header>
 </template>

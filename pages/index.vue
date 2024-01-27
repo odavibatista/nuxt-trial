@@ -43,10 +43,6 @@ const carousel = [
         alt: 'slide 4'
     }
 ]
-const response = await pingService()
-
-
-const hello = response.data.hello
 
 </script>
 <template>
@@ -76,7 +72,6 @@ const hello = response.data.hello
                     </div>
                 </div>
             </div>
-        <p>{{ hello }}</p>
         </Container>
         <Footer />
     </div>
