@@ -1,5 +1,3 @@
-import api from "./api";
-
 interface subscriptionParams {
     email: string
 }
@@ -7,27 +5,44 @@ interface subscriptionParams {
 const subscriptionsService = {
     /* Create  a new sub */
     create: async (params: subscriptionParams) => {
-        const response = await api.post("/subs/create", params).catch((error) => {
+        const { data: response } = await apiRequest("/subs/create", {
+            method: "POST",
+            headers: {
+                "client-platform": "browser"
+            },
+            body: params
+        }).catch((error) => {
             if (error.response.status === 400 || error.response.status === 401) {
                 return error.response;
             }
             return error;
         })
-        return response;
+
+        return toRaw(response.value)
     },
 
     /* Get all the subscriptions */
     findAll: async () => {
-        const response = api.get("/subs/get").catch((error) => {
+        const { data: response } = await apiRequest("/subs/get", {
+            method: "GET",
+            headers: {
+                "client-platform": "browser"
+            }
+        }).catch((error) => {
             return error.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Delete a subscritpion passing its id */
     delete: async (id: string) => {
-        const response = api.delete(`/subs/delete/${id}`).catch((error) => {
+        const { data: response } = await apiRequest(`/subs/delete/${id}`,   {
+            method: "DELETE",
+            headers: {
+                "client-platform": "browser"
+            }
+        }).catch((error) => {
             return error.response
         })
 

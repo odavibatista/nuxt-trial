@@ -1,5 +1,3 @@
-import api from "./api"
-
 interface RegisterParams {
     name: string;
     email: string;
@@ -14,36 +12,41 @@ interface LoginParams {
 const authService   =   {
     /* User register */
     register: async (params: RegisterParams) => {
-        const response = await api.post("/auth/register", params).catch((error) => {
-            if (error.response.status === 400 || error.response.status === 401) {
-                return error.response;
-            }
-
-            return error;
+        const { data: response } = await apiRequest(`/auth/register`, {
+            method: 'POST',
+            headers: {
+                "client-platform": "browser"
+            },
+            body: params
+        }).catch((err) => {
+            return err.response
         })
 
-        return response;
+        return toRaw(response.value)
     },
 
     /* User login */
     login: async (params: LoginParams) => {
-        const response = await api.post("/auth/login", params).catch((error) => {
+        const { data: response } = await apiRequest("/auth/login", {
+            method: "POST",
+            headers: {
+                "client-platform": "browser"
+            },
+            body: params
+        }).catch((err) => {
+            if (err.response.status === 400 || err.response.status === 401) {
+                return err.response;
+            }
 
-        if (error.response.status === 400 || error.response.status === 401) {
-            return error.response;
-
-        }
-
-        return error;
-
+            return err
         })
 
+        console.log(response)
         if (response.status === 200) {
             sessionStorage.setItem("token", response.data.token);
         }
-
-        return response;
     }
+    
 }
 
 export default authService

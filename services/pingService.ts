@@ -1,9 +1,6 @@
-import baseURL from './api'
-
 const pingService = async ()    =>  {
-    const response = await $fetch("/ping", {
+    const { data: response } = await apiRequest("/ping", {
         method: "GET",
-        baseURL: baseURL,
         headers: {
             "client-platform": "browser",
         },
@@ -11,7 +8,7 @@ const pingService = async ()    =>  {
         return err.response
     })
 
-    return response    
+    return toRaw(response.value)    
 }
 
 export default pingService

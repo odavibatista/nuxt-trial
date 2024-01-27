@@ -48,10 +48,14 @@ const storesService = {
 
     /* Create a new store */
     create: async (store: CreateStoreParams) => {
+        // Dummy token, still to be added
+        const token = localStorage.getItem("user-token")
+
         const { data: response } = await apiRequest(`/stores/create`, {
             method: 'POST',
             headers: {
                 "client-platform": "browser",
+                Authorization: `Bearer ${token}`
             },
             body: store
         }).catch((err) => {
@@ -63,10 +67,14 @@ const storesService = {
 
     /* Update a store */
     update: async (store: StoreType) => {
+        // Dummy token, still to be added
+        const token = localStorage.getItem("user-token")
+
         const { data: response } = await apiRequest(`/stores/update/${store.id}`, {
             method: 'PUT',
             headers: {
                 "client-platform": "browser",
+                Authorization: `Bearer ${token}`
             },
             body: store
         }).catch((err) => {
@@ -78,10 +86,14 @@ const storesService = {
 
     /* Delete a store */
     delete: async (storeId: string) => {
+        // Dummy token, still to be added
+        const token = localStorage.getItem("user-token")
+
         const { data: response } = await apiRequest(`/stores/delete/${storeId}`, {
             method: 'DELETE',
             headers: {
                 "client-platform": "browser",
+                Authorization: `Bearer ${token}`
             }
         }).catch((err) => {
             return err.response

@@ -6,20 +6,30 @@ interface CreateCategoryParams {
 const categoriesService = {
     /* Get all categories */
     findAll: async () => {
-        const response = api.get("/categories/get").catch((err) => {
+        const { data: response } = await apiRequest("/categories/get", {
+            method: 'GET',
+            headers: {
+                "client-platform": "browser",
+            }
+        }).catch((err) => {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
-    /* Get one category by its id */
-    findOne: async (id: string) => {
-        const response = api.get(`/categories/get/${id}`).catch((err) => {
+    /* Get one cateogory by its id */
+    getById: async (categoryId: string) => {
+        const { data: response } = await apiRequest(`/categories/get/${categoryId}`, {
+            method: 'GET',
+            headers: {
+                "client-platform": "browser",
+            }
+        }).catch((err) => {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Create a new category */
@@ -27,15 +37,18 @@ const categoriesService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.post("/categories/create", { name }, {
+        const { data: response } = await apiRequest("/categories/create", {
+            method: 'POST',
             headers: {
-                Authorization: `Bearer ${token}`
-            }
+                "client-platform": "browser",
+                Authorization: `Bearer ${token}`,
+            },
+            body: data
         }).catch((err) => {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Update a category */
@@ -43,15 +56,18 @@ const categoriesService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.patch(`/categories/update/${id}`, data, {
+        const { data: response } = await apiRequest(`/categories/update/${id}`, {
+            method: 'PATCH',
             headers: {
+                "client-platform": "browser",
                 Authorization: `Bearer ${token}`
-            }
+            },
+            body: data
         }).catch((err) => {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     },
 
     /* Delete a category */
@@ -59,15 +75,17 @@ const categoriesService = {
         // Dummy token, still to be added
         const token = localStorage.getItem("user-token")
 
-        const response = api.delete(`/categories/delete/${id}`, {
+        const { data: response } = await apiRequest(`/categories/delete/${id}`, {
+            method: 'DELETE',
             headers: {
+                "client-platform": "browser",
                 Authorization: `Bearer ${token}`
             }
         }).catch((err) => {
             return err.response
         })
 
-        return response
+        return toRaw(response.value)
     }
 }
 
