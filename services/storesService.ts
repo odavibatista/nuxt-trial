@@ -22,12 +22,9 @@ interface CreateStoreParams {
 const storesService = {
     /* Get all stores */
     findAll: async () => {
-        const response = await $fetch("/stores/get", {
-            method: "GET",
-            baseURL: baseURL,
-            headers: {
-                "client-platform": "browser",
-            }
+        const { data: response } = await useLazyFetch(`/stores/get`, {
+            method: 'GET',
+            baseURL: baseURL
         })
 
         return response
