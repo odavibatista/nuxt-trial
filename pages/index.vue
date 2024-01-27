@@ -43,7 +43,6 @@ const carousel = [
         alt: 'slide 4'
     }
 ]
-
 </script>
 <template>
     <div>
@@ -78,7 +77,6 @@ const carousel = [
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
 * {
     scroll-behavior: smooth;
 }

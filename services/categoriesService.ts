@@ -1,4 +1,4 @@
-import api from "./api"
+import baseURL from "./api"
 
 interface CreateCategoryParams {
     name: string

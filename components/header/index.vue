@@ -17,7 +17,7 @@ const styles = {
         <div :class="styles.div">
             <a :class="styles.links" href="/"> Home </a>
             <a :class="styles.links" href="/about"> About </a>
-            <a :class="styles.links" href="/products">  Products </a>
+            <a :class="styles.links" href="/products"> Products </a>
             <a :class="styles.links" href="/featured"> Featured </a>
             <a :class="styles.links" href="/stores"> Our Stores </a>
         </div>

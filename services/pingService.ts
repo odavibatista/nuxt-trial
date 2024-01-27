@@ -1,7 +1,13 @@
-import api from './api'
+import baseURL from './api'
 
 const pingService = async ()    =>  {
-    const response = api.get('/ping').catch((err) => {
+    const response = await $fetch("/ping", {
+        method: "GET",
+        baseURL: baseURL,
+        headers: {
+            "client-platform": "browser",
+        },
+    }).catch((err) => {
         return err.response
     })
 

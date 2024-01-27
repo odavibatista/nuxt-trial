@@ -13,7 +13,7 @@ const styles = {
 </script>
 
 <template>
-        <div :class="styles.card">
+    <div :class="styles.card">
         <img :src="store.imgUrl" />
         <div :class="styles.texts">
             <h6 :class="styles.name">{{ store.name }}</h6>
