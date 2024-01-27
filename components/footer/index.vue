@@ -19,19 +19,22 @@ const styles = {
     links: 'font-medium transition-colors hover:text-red-600 text-xs lg:text-sm xl:text-base font-ms',
     icons: 'hover:text-red-600 transition-colors duration-300 ease-in-out h-5 w-5 md:w-6 md:h-6 lg:w-8 lg:h-8'
 }
+
+const year = new Date().getFullYear()
+
 </script>
 
 <template>
     <footer :class="styles.footer">
         <div :class="styles.top.div">
             <div :class="styles.top.left">
-                <h5 :class="styles.top.h5">Join Daniels' News!</h5>
-                <p>Get news, discounts, recipes and more!</p>
+                <h5 :class="styles.top.h5">Conheça a Daniels' News!</h5>
+                <p>Receba notícias, descontos, receitas e mais!</p>
                 <span :class="styles.top.span">
                     <input
                         type="text"
                         :class="styles.top.input"
-                        placeholder="Your e-mail here..."
+                        placeholder="Insira seu e-mail..."
                     />
                     <button :class="styles.top.button">
                         <svg
@@ -52,11 +55,11 @@ const styles = {
             </div>
             <div :class="styles.top.right">
                 <div :class="styles.top.linksDiv">
-                    <RouterLink :class="styles.links" to="/"> Home </RouterLink>
-                    <RouterLink :class="styles.links" to="/about"> About </RouterLink>
-                    <RouterLink :class="styles.links" to="/products"> Products </RouterLink>
-                    <RouterLink :class="styles.links" to="/featured"> Featured </RouterLink>
-                    <RouterLink :class="styles.links" to="/stores"> Our Stores </RouterLink>
+                    <RouterLink :class="styles.links" to="/"> Índice </RouterLink>
+                    <RouterLink :class="styles.links" to="/about"> Sobre </RouterLink>
+                    <RouterLink :class="styles.links" to="/products"> Produtos </RouterLink>
+                    <RouterLink :class="styles.links" to="/featured"> Ofertas </RouterLink>
+                    <RouterLink :class="styles.links" to="/stores"> Unidades  </RouterLink>
                 </div>
                 <div :class="styles.top.socialLinks">
                     <a href="https://www.facebook.com">
@@ -121,10 +124,9 @@ const styles = {
         <div :class="styles.bottom">
             <img src="/header/brand.png" alt="brand" :class="styles.brand" />
             <p :class="styles.p">
-                Daniels' steaks is a fictional butcher house created by odavibatista. None of this
-                site's images belong to me, and are meant uniquely for educational use.
+                Daniels' Steaks é uma linha de açougues e empresa pecuarista fictícia criada por odavibatista. Nenhuma das imagens desse site me pertence e são utilizadas unicamente para uso educacional.
             </p>
-            <p :class="styles.p">2023. All Rights Reserved.</p>
+            <p :class="styles.p">{{ year }}. Todos os Direitos Reservados</p>
         </div>
     </footer>
 </template>

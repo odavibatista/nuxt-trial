@@ -1,13 +1,15 @@
 <script setup>
 import storesService from '@/services/storesService'
 
-const allStores = await storesService.findAll()
+const stores = await storesService.findAll()
+
+const allStores = await stores.stores
 
 const cards_section = 'flex flex-row gap-14 flex-wrap justify-center md:justify-around py-12'
-</script>
+</script>   
 
 <template>
     <div :class="cards_section">
-        <StoreCard as="div" v-for="store of allStores.stores" v-bind="store" />
+        <LazyStoreCard as="div" v-for="store of allStores" v-bind="store" />
     </div>
 </template>

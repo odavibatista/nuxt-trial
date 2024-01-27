@@ -1,11 +1,11 @@
 <script setup>
 definePageMeta({
-    title: 'Success!'
+    title: "Daniels' - Sucesso!"
 })
 
 useHead({
-    title: 'Success!',
-    meta: [{ name: 'Newsletter Sign Success', content: 'Newsletter succesfully signed!' }]
+    title: "Sucesso!",
+    meta: [{ name: 'Newsletter assinada com sucesso!', content: "Newsletter da Daniels' assinada com sucesso!" }]
 })
 
 const styles = {
@@ -20,14 +20,13 @@ const styles = {
 
 <template>
     <Container :class="styles.container">
-        <h1 :class="styles.h1">Yes! You're now one of us!</h1>
+        <h1 :class="styles.h1">Oh yeah! Agora você é um de nós!</h1>
         <img src="/header/brand.png" alt="Daniel's logo" :class="styles.logo" />
         <p :class="styles.p">
-            We're glad to have you on board with us! We'll send the best of our offers to your
-            e-mail. Stay tuned!
+            É um prazer ter você a bordo conosco! Nós te enviaremos as nossas melhores ofertas para seu email. Fique ligado!
         </p>
         <RouterLink to="/">
-            <button :class="styles.button">Back Home</button>
+            <button :class="styles.button">Voltar</button>
         </RouterLink>
     </Container>
 </template>

@@ -6,7 +6,7 @@ definePageMeta({
 
 useHead({
     title: "Daniels' - Home",
-    meta: [{ name: 'Daniels - Homepage', content: "Our steak stores' homepage" }]
+    meta: [{ name: 'Daniels - Homepage', content: "Homepage da Daniels' Steaks, a melhor linha de açougues à sua disposição." }]
 })
 
 const styles = {
@@ -49,25 +49,25 @@ const carousel = [
         <Header />
         <Container>
             <div class="flex flex-col">
-                <h1 :class="styles.h1">The best steaks, with the best prices.</h1>
+                <h1 :class="styles.h1">As melhores carnes, aos melhores preços.</h1>
                 <article :class="styles.sub">
-                    Daniels' comes handy on barbecue supplies and quality grade meat.
+                    Daniels' é prática para lhe fornecer os melhores cortes e melhores itens para o seu churrasco.
                 </article>
             </div>
 
             <div :class="styles.divs.carousel">
                 <Carousel :links="carousel" :class="styles.carousel" />
                 <div :class="styles.divs.offer">
-                    <h3 :class="styles.divs.deal_title">Deal of the week</h3>
+                    <h3 :class="styles.divs.deal_title">Oferta da semana</h3>
                     <div :class="styles.divs.deal_div">
                         <img
                             src="/home/deal.jpg"
                             alt="deal of the week"
                             :class="styles.divs.deal_img"
                         />
-                        <h6 :class="styles.divs.h6">Veal Rack</h6>
-                        <p :class="styles.divs.p">$ 9.49</p>
-                        <button :class="styles.divs.button">Shop it</button>
+                        <h6 :class="styles.divs.h6">Carré de Vitela</h6>
+                        <p :class="styles.divs.p">R$ 39.49</p>
+                        <button :class="styles.divs.button">QUERO O MEU</button>
                     </div>
                 </div>
             </div>
