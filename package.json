@@ -4,7 +4,6 @@
   "scripts": {
     "docker:up": "docker compose up --build -d",
     "docker:run": "docker run -it --rm -p 3000:3000 daniels-steaks-webapp",
-    "docker:build": "docker build -t daniels-steaks-webapp .",
     "docker:down": "docker compose down",
     "docker:restart": "docker compose restart",
     "docker:rebuild": "npm run docker:down; npm run docker:up",
